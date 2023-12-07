@@ -1,8 +1,8 @@
 #include "fft.hpp"
 #include <iostream>
 int main(){
-    std::vector<int> source_vec{1,5,-9,8,-7,5,6,-2};
-    // std::vector<int> source_vec{0, 1, 2, 3};
+    // std::vector<int> source_vec{1,5,-9,8,-7,5,6,-2};
+    std::vector<int> source_vec{1, 2, 3, 4};
     std::vector<std::complex<double>> vec(source_vec.begin(), source_vec.end());
     std::vector<std::complex<double>> freq = fft::fft(vec);
     std::vector<std::complex<double>> time = fft::ifft(freq);
