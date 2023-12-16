@@ -10,11 +10,11 @@ file(GLOB LIB_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/lib/*.cpp")
 
 # Add the necessary header files from the "include" directory
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/include")
-
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/../third-party/cereal/include")
 
 # Create an executable target for each example file
 foreach(EXAMPLE_SOURCE ${EXAMPLE_SOURCES})
+
     # Get the base name of the example file without extension
     get_filename_component(EXAMPLE_NAME ${EXAMPLE_SOURCE} NAME_WE)
 
@@ -25,9 +25,6 @@ foreach(EXAMPLE_SOURCE ${EXAMPLE_SOURCES})
     set_target_properties(${EXAMPLE_NAME} PROPERTIES
         RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../build/bin
     )
-
-    # Link against the cereal library for each executable
-    # target_link_libraries(${EXAMPLE_NAME} PRIVATE cereal)
 
 endforeach()
 

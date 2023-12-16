@@ -11,17 +11,10 @@ project(FFT C CXX)
 # Include the CMakeLists.txt in the src directory
 add_subdirectory(src)
 
-# Include the third-party library
+
+#--------------------------------------------------------------------
+# Include third-party library
+#--------------------------------------------------------------------
+
+# Include cereal
 add_subdirectory(third-party/cereal)
-
-
-# #--------------------------------------------------------------------
-# # Third-party logic
-# #--------------------------------------------------------------------
-# include (ExternalProject)
-
-# # third party directories
-# set( THIRDPARTYDIR ${CMAKE_CURRENT_SOURCE_DIR}/third-party )
-
-# ### Handle third-party CEREAL
-# include_directories( ${THIRDPARTYDIR}/cereal/include )

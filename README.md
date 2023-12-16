@@ -10,10 +10,13 @@ The below trees describes the structure of this repostitory.
 |   └── bin
 |       └── example
 |
-└── src
-    ├── example
-    ├── include
-    └── lib
+├── src
+|   ├── example
+|   ├── include
+|   └── lib
+|
+└── third-party
+    └── cereal
 ```
 
 ## The descriptions of library components
@@ -21,6 +24,7 @@ The below trees describes the structure of this repostitory.
 |:------------|:-----------------|
 | build       | Binaries and build scripts (this folder is created by the user).  |
 | src         | this folder contain three folders, example is ```main``` function, you can locate header file in include folder, and implementation of header file in lib folder |
+| third-party | this folder contain external library which include as submodule.  |
 
 
 #### Instuction for build the project
